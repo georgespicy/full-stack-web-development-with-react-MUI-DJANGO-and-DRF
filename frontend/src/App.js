@@ -4,7 +4,8 @@ import { Routes, Route } from 'react-router-dom'
 import { Box } from '@mui/material'
 import Categories from './pages/Categories/Categories'
 import Testing from './Testing'
-import CategoriesDetails from './pages/Categories/CategoriesDetails'
+import CategoriesCreate from './pages/Categories/CategoriesCreate'
+import EditCategories from './pages/Categories/EditCategories'
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       }}>
         <Routes>
           <Route path='/categories' element={<Categories />} />
-          <Route path='categories/create' element={<CategoriesDetails />} />
+          <Route path='categories/create' element={<CategoriesCreate />} />
+          <Route path='categories/edit/:id/' element={<EditCategories />} />
         </Routes>
       </Box>
       {/* <Testing /> */}

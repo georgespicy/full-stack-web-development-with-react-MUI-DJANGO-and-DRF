@@ -8,7 +8,9 @@ import axios from 'axios'
 
 function Categories() {
     const URL = `http://localhost:8000/api/categories/`;
+
     const [tasks, setTasks] = useState([]);
+
     useEffect(() => {
         axios.get(URL)
             .then(res => {
@@ -16,9 +18,9 @@ function Categories() {
             }).catch(err => {
                 setTasks(err.data)
             })
-        
+
     }, [])
-    console.log(tasks)
+
 
     return (
         <div>
@@ -28,7 +30,7 @@ function Categories() {
                 mt: 4,
                 mb: 4
             }}>
-                <Button 
+                <Button
                     component={Link}
                     variant="contained"
                     color='primary'
@@ -66,7 +68,7 @@ function Categories() {
                                         display: "flex",
                                         justifyContent: "flex-end"
                                     }}>
-                                        <Link to={`/categories/edit/${r.id}`} key="category-edit">
+                                        <Link to={`/categories/edit/${r.id}`}>
                                             <IconButton size="large">
                                                 <EditIcon />
                                             </IconButton>

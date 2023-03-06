@@ -1,12 +1,11 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Formik, Field, Form } from "formik";
+import { Formik } from "formik";
 import { Grid, TextField, Typography, Paper, Button, Box } from '@mui/material';
-import * as yup from "yup"
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-function CategoriesDetails() {
+function CategoriesCreate() {
 
     const URL = `http://localhost:8000/api/categories/`;
     const navigate = useNavigate();
@@ -81,8 +80,6 @@ function CategoriesDetails() {
                                             size='medium'
                                             variant='contained'
                                             color='primary'
-                                            // component={Link}
-                                            // to="/categories"
                                         >
                                             Submit
                                         </Button>
@@ -97,4 +94,4 @@ function CategoriesDetails() {
     )
 }
 
-export default CategoriesDetails
+export default CategoriesCreate
