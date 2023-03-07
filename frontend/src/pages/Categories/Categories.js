@@ -18,7 +18,6 @@ function Categories() {
             }).catch(err => {
                 setTasks(err.data)
             })
-
     }, [])
 
 
